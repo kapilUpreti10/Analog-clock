@@ -1,0 +1,69 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Varela+Round&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2D2E40;
+}
+.container{
+    position: relative;
+}
+.clock{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 300px;
+    aspect-ratio: 1/1;
+    font-family: 'Poppins', sans-serif;
+    background-color: #19585F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    
+    .clock span{
+        position: absolute;
+        transform: rotate(calc(30deg*var(--v)));
+        inset: 10px;
+        text-align: center;
+    }
+.clock span b{
+    transform: rotate(calc(-30deg*var(--v)));
+    display: inline-block;
+
+}
+.clock::before{
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 5;
+
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+ .hand i{
+    position: absolute;
+    background-color:var(--color);
+    width: 5px;
+    height: var(--height);
+    border-radius: 8px;
+ }
